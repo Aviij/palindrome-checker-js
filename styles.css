@@ -1,1 +1,21 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+.container{
+    background-color: #0a0a23;
+    color:aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/* Center content vertically */
+    align-items: center;/* Center content horizontally */
+    padding: 10px;
+}
+.freecodecamp-logo{
+    width: 30%;
+    max-width: 100%;
+    height: 100%;
+}
