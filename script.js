@@ -2,6 +2,8 @@
     //get the input,check button  elements
     const textElement  = document.getElementById("text-input");
     const checkbtn = document.getElementById("check-btn");
+    const resultElement = document.getElementById("results");
+    
     //attach an event listener to the "Check" button
 
     checkbtn.addEventListener(('click') , isEmpty => {
@@ -10,16 +12,21 @@
         const inputText = textElement.value.trim(); //trim whitespace all
             
         if(inputText ===''){
-            alert("Enter some value");
+            alert("Please input a value");
             return;
         }
         if(inputText !== ''){
+           
             const isItPalindrome = isPlaindrome(inputText);
+            let resultText; // Create a variable to store the result message
             if(isItPalindrome){
-                alert("yes a plaindrome");
+                 resultText = 'is a palindrome';
             }else{
-                alert("Nah, not a palindrome!");
+                 resultText = "is not a palindrome.";
             }
+
+            resultElement.textContent = `${inputText} ${resultText}`;
+
         }
 
     });
